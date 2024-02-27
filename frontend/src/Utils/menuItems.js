@@ -15,13 +15,13 @@ export const menuItems = [
     },
     {
         id:3,
-        title: "View Transactions",
+        title: "Incomes",
         icon: trend,
         link:"/dashboard"  
     },
     {
         id:4,
-        title: "View Transactions",
+        title: "Expenses",
         icon: expenses,
         link:"/dashboard"  
     }
