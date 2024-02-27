@@ -4,10 +4,16 @@ import {MainLayout} from './styles/Layouts'
 import Orb from './Components/Orb/Orb'
 import Navigation from './Components/Navigation/Navigation';
 import { useMemo, useState } from 'react';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Incomes from './Components/Incomes/Incomes';
+import Expenses from './Components/Expenses/Expenses';
+import { useGlobalContext } from './Context/globalContext';
 
 function App() {
 
   const [active, setActive] = useState(1)
+
+  const global = useGlobalContext()
 
   const orbMemo = useMemo(() => {
     return <Orb/>
@@ -16,7 +22,15 @@ function App() {
   const displayData = () => {
     switch(active) {
       case 1: 
-        
+        return <Dashboard/>
+      case 2:
+        return <Dashboard/>
+      case 3:
+        return <Incomes/>
+      case 4:
+        return <Expenses/>
+      default: <Dashboard/>
+      
     }
   }
 
@@ -26,7 +40,7 @@ function App() {
       <MainLayout>
         <Navigation active={active} setActive={setActive} />
         <main>
-          {displayData}
+          {displayData()}
         </main>
       </MainLayout>
     </AppStyled>

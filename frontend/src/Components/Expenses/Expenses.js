@@ -2,19 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import { InnerLayout } from '../../styles/Layouts';
 
-function Dashboard() {
+function Expenses() {
   return (
-    <DashboardStyled>
+    <ExpensesStyled>
         <InnerLayout>
-            <h1>Dashboard</h1>
+            <h1>Expenses</h1>
         </InnerLayout>
-    </DashboardStyled>
+    </ExpensesStyled>
   )
 }
 
-const DashboardStyled = styled.div`
+const ExpensesStyled = styled.div`
 
 
 `;
 
-export default Dashboard
+export default Expenses
